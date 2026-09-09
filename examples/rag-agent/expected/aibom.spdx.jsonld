@@ -2,7 +2,7 @@
   "@context": "https://spdx.org/rdf/3.0.1/spdx-context.jsonld",
   "@graph": [
     {
-      "comment": "Version 0.1.1",
+      "comment": "Version 1.0.0",
       "creationInfo": "_:creationinfo",
       "name": "operational-aibom",
       "spdxId": "urn:aibom:tool:operational-aibom",

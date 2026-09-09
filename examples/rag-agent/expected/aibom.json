@@ -170,7 +170,7 @@
     "generatedAt": "2026-09-08T22:49:31.000Z",
     "generator": {
       "name": "operational-aibom",
-      "version": "0.1.1"
+      "version": "1.0.0"
     },
     "id": "urn:aibom:document:sha256:8b7e2d67e4425f133252f1a1f70a6226623ba696a906f2e8b34d9a164ad9cb0b",
     "source": {

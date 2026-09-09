@@ -2,6 +2,14 @@
 
 All notable changes will be recorded in this file.
 
+## 1.0.0 - 2026-09-08
+
+- publish the first stable CLI, TypeScript library and GitHub Action release;
+- establish the evidence-classified operational AIBOM format and validation contract;
+- ship deterministic generation, semantic diff, impact analysis and sensitivity projections;
+- provide CycloneDX 1.7 and SPDX 3.0.1 compatibility exports;
+- publish npm and GitHub release artifacts through the reviewed CI workflow with provenance.
+
 ## 0.1.1 - 2026-09-08
 
 - publish the package from the CI-built tarball through npm trusted publishing;
