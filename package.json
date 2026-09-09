@@ -31,6 +31,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "overrides": {
+    "esbuild": "0.28.2"
+  },
   "bin": {
     "aibom": "./dist/cli.js"
   },
