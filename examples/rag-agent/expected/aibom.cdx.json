@@ -1,0 +1,451 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 6,
+            "location": "package.json"
+          }
+        ]
+      },
+      "name": "openai",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "internal"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "software-library"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "discovered"
+        },
+        {
+          "name": "operational-aibom:evidence",
+          "value": "urn:aibom:evidence:sha256:13ef6c8ef3a41ca17cb209e9f4487a07ec8fa33a1d1ea4a4c8e4eb7263e57688"
+        },
+        {
+          "name": "operational-aibom:property:category",
+          "value": "model-provider-sdk"
+        },
+        {
+          "name": "operational-aibom:property:declaredVersion",
+          "value": "^5.0.0"
+        },
+        {
+          "name": "operational-aibom:property:dependencySection",
+          "value": "dependencies"
+        },
+        {
+          "name": "operational-aibom:property:usageAssertion",
+          "value": "dependency-declaration"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 5,
+            "location": "package.json"
+          }
+        ]
+      },
+      "name": "@langchain/core",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "internal"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "framework"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "discovered"
+        },
+        {
+          "name": "operational-aibom:evidence",
+          "value": "urn:aibom:evidence:sha256:411637ec46189581f99f96ca55d06e43d9e99853de23b733d31956b053f4de9c"
+        },
+        {
+          "name": "operational-aibom:property:category",
+          "value": "ai-framework"
+        },
+        {
+          "name": "operational-aibom:property:declaredVersion",
+          "value": "^1.0.0"
+        },
+        {
+          "name": "operational-aibom:property:dependencySection",
+          "value": "dependencies"
+        },
+        {
+          "name": "operational-aibom:property:usageAssertion",
+          "value": "dependency-declaration"
+        }
+      ],
+      "type": "framework"
+    },
+    {
+      "bom-ref": "urn:example:agent:support",
+      "name": "Support agent",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "public"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "agent"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "declared"
+        }
+      ],
+      "type": "application",
+      "version": "1.0.0"
+    },
+    {
+      "bom-ref": "urn:example:dataset:regression",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "data/evaluation/regression.jsonl"
+          }
+        ]
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
+        }
+      ],
+      "name": "regression.jsonl",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "public"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "evaluation-dataset"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "merged"
+        },
+        {
+          "name": "operational-aibom:evidence",
+          "value": "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79"
+        },
+        {
+          "name": "operational-aibom:property:artifactPath",
+          "value": "data/evaluation/regression.jsonl"
+        },
+        {
+          "name": "operational-aibom:property:fileSize",
+          "value": "79"
+        },
+        {
+          "name": "operational-aibom:property:usageAssertion",
+          "value": "repository-presence"
+        }
+      ],
+      "type": "data"
+    },
+    {
+      "bom-ref": "urn:example:model:openai:gpt-4.1",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 4,
+            "location": "src/agent.ts"
+          }
+        ]
+      },
+      "name": "gpt-4.1",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "public"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "hosted-model"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "merged"
+        },
+        {
+          "name": "operational-aibom:evidence",
+          "value": "urn:aibom:evidence:sha256:c7fe14fdd3ee48a1e217791304bd65fcc84c7c1d0b1d5ba606441df2f3ae768b"
+        },
+        {
+          "name": "operational-aibom:property:provider",
+          "value": "openai"
+        },
+        {
+          "name": "operational-aibom:property:usageAssertion",
+          "value": "source-reference"
+        }
+      ],
+      "supplier": {
+        "name": "OpenAI"
+      },
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "urn:example:prompt:support-system",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "prompts/system.prompt.txt"
+          }
+        ]
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
+        }
+      ],
+      "name": "system.prompt.txt",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "public"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "prompt"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "merged"
+        },
+        {
+          "name": "operational-aibom:evidence",
+          "value": "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c"
+        },
+        {
+          "name": "operational-aibom:property:artifactPath",
+          "value": "prompts/system.prompt.txt"
+        },
+        {
+          "name": "operational-aibom:property:fileSize",
+          "value": "100"
+        },
+        {
+          "name": "operational-aibom:property:usageAssertion",
+          "value": "repository-presence"
+        }
+      ],
+      "type": "file"
+    },
+    {
+      "bom-ref": "urn:example:tool:create-case",
+      "name": "create_support_case",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "internal"
+        },
+        {
+          "name": "operational-aibom:component-type",
+          "value": "tool"
+        },
+        {
+          "name": "operational-aibom:origin",
+          "value": "declared"
+        },
+        {
+          "name": "operational-aibom:property:approvalRequired",
+          "value": "true"
+        },
+        {
+          "name": "operational-aibom:property:identity",
+          "value": "support-assistant-managed-identity"
+        }
+      ],
+      "type": "application"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1",
+        "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69",
+        "urn:example:agent:support",
+        "urn:example:dataset:regression",
+        "urn:example:model:openai:gpt-4.1",
+        "urn:example:prompt:support-system"
+      ],
+      "ref": "urn:example:system:support-assistant"
+    },
+    {
+      "dependsOn": [],
+      "ref": "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1"
+    },
+    {
+      "dependsOn": [],
+      "ref": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69"
+    },
+    {
+      "dependsOn": [
+        "urn:example:dataset:regression",
+        "urn:example:model:openai:gpt-4.1",
+        "urn:example:prompt:support-system",
+        "urn:example:tool:create-case"
+      ],
+      "ref": "urn:example:agent:support"
+    },
+    {
+      "dependsOn": [],
+      "ref": "urn:example:dataset:regression"
+    },
+    {
+      "dependsOn": [],
+      "ref": "urn:example:model:openai:gpt-4.1"
+    },
+    {
+      "dependsOn": [],
+      "ref": "urn:example:prompt:support-system"
+    },
+    {
+      "dependsOn": [],
+      "ref": "urn:example:tool:create-case"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "urn:example:system:support-assistant",
+      "description": "Synthetic RAG assistant used to demonstrate operational AIBOM generation.",
+      "name": "Example support assistant",
+      "properties": [
+        {
+          "name": "operational-aibom:sensitivity",
+          "value": "public"
+        },
+        {
+          "name": "operational-aibom:property:criticality",
+          "value": "medium"
+        }
+      ],
+      "type": "application",
+      "version": "1.0.0"
+    },
+    "properties": [
+      {
+        "name": "operational-aibom:source-document",
+        "value": "urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299"
+      },
+      {
+        "name": "operational-aibom:export-loss",
+        "value": "Evidence classes, temporal separation and relationship semantics may be represented only partially in this CycloneDX view."
+      }
+    ],
+    "timestamp": "2026-09-08T22:49:31.000Z",
+    "tools": {
+      "components": [
+        {
+          "name": "operational-aibom",
+          "type": "application",
+          "version": "0.1.0"
+        }
+      ]
+    }
+  },
+  "properties": [
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:20b097e5253cffa5588cb024e076aa3b032d92fd9dae60f5458ad4238a6d0a66",
+      "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"references\",\"to\":\"urn:example:model:openai:gpt-4.1\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:53461fda8780be6cdc7b0b9debe1215723ccb549b6a36dcfb507d2d7cd82802c",
+      "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"references\",\"to\":\"urn:example:dataset:regression\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:71c2906f82cd13a3bd63f05ea523683a1c6b1c4ba8294147dbce67fe35d671b5",
+      "value": "{\"from\":\"urn:example:agent:support\",\"type\":\"governed-by\",\"to\":\"urn:example:prompt:support-system\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:80d729cfc59d4b01577fee4c73bd9095a40f0805ff710dd2f9e07df678ed633c",
+      "value": "{\"from\":\"urn:example:agent:support\",\"type\":\"evaluated-with\",\"to\":\"urn:example:dataset:regression\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:820cc3178ebcaec0ed971eb5cf17a46d236df3f01d1d8806e2de681056ffd46f",
+      "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"references\",\"to\":\"urn:example:prompt:support-system\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:9f6b9ee730324aacc9e2e92b3a1be392cd365d8484f39348955505135dfa6007",
+      "value": "{\"from\":\"urn:example:agent:support\",\"type\":\"uses-model\",\"to\":\"urn:example:model:openai:gpt-4.1\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:af7fb676a3157a90626c13588b4a806cf7398c1b309c73acca79e1b45b290d5d",
+      "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"depends-on\",\"to\":\"urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:b28fe999e5a9a11b54d0d31fb262d1d7509e06992729547f22190ebd52bd4974",
+      "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"contains\",\"to\":\"urn:example:agent:support\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:cc267f3284da90bb988a1f0bc2bd2a0725abcf0b1b4517d81f15569cc1244793",
+      "value": "{\"from\":\"urn:example:agent:support\",\"type\":\"can-invoke\",\"to\":\"urn:example:tool:create-case\"}"
+    },
+    {
+      "name": "operational-aibom:relationship:urn:aibom:relationship:sha256:cdc3c539f425758840ae7994651eedc31ccdb2dede5ab9c45e36a0459c25e49f",
+      "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"depends-on\",\"to\":\"urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:13ef6c8ef3a41ca17cb209e9f4487a07ec8fa33a1d1ea4a4c8e4eb7263e57688",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1\",\"claim\":\"Dependency declaration references openai ^5.0.0.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:2392e39c199583f366d78ace627ad4d2838d3f1e4791a2e82d9a4d3bfb149a76",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:system:support-assistant\",\"claim\":\"Generation used a manifest matching SHA-256 a63260d559c8a8fb6f5699486a6daf1f5a4791713149885dde2e8eafe68b0403.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:411637ec46189581f99f96ca55d06e43d9e99853de23b733d31956b053f4de9c",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69\",\"claim\":\"Dependency declaration references @langchain/core ^1.0.0.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:prompt:support-system\",\"claim\":\"Repository contains a prompt artifact at prompts/system.prompt.txt.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:dataset:regression\",\"claim\":\"Repository contains a evaluation-dataset artifact at data/evaluation/regression.jsonl.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:c7fe14fdd3ee48a1e217791304bd65fcc84c7c1d0b1d5ba606441df2f3ae768b",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:model:openai:gpt-4.1\",\"claim\":\"Source contains a reference to openai model identifier gpt-4.1.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:example:evidence:model-card",
+      "value": "{\"class\":\"supplier-declaration\",\"subject\":\"urn:example:model:openai:gpt-4.1\",\"claim\":\"The supplier documents this identifier as a hosted model.\",\"observedAt\":\"2026-09-01T00:00:00Z\",\"validUntil\":\"2026-12-01T00:00:00Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:example:evidence:regression-run",
+      "value": "{\"class\":\"organisational-assessment\",\"subject\":\"urn:example:agent:support\",\"claim\":\"The declared agent composition passed the synthetic regression suite.\",\"observedAt\":\"2026-09-01T00:00:00Z\",\"validUntil\":\"2026-10-01T00:00:00Z\"}"
+    },
+    {
+      "name": "operational-aibom:unknown:urn:example:unknown:model-training-data",
+      "value": "{\"subject\":\"urn:example:model:openai:gpt-4.1\",\"field\":\"trainingDataset\",\"reason\":\"The hosted model supplier does not publish a complete training dataset inventory.\",\"reviewAfter\":\"2026-12-01T00:00:00Z\"}"
+    }
+  ],
+  "serialNumber": "urn:uuid:a4851484-b551-5c97-a4dc-c02150856232",
+  "specVersion": "1.7",
+  "version": 1
+}

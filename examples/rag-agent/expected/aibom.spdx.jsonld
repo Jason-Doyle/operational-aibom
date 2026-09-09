@@ -1,0 +1,224 @@
+{
+  "@context": "https://spdx.org/rdf/3.0.1/spdx-context.jsonld",
+  "@graph": [
+    {
+      "comment": "Version 0.1.0",
+      "creationInfo": "_:creationinfo",
+      "name": "operational-aibom",
+      "spdxId": "urn:aibom:tool:operational-aibom",
+      "type": "Tool"
+    },
+    {
+      "@id": "_:creationinfo",
+      "created": "2026-09-08T22:49:31Z",
+      "createdBy": [
+        "urn:aibom:tool:operational-aibom"
+      ],
+      "createdUsing": [
+        "urn:aibom:tool:operational-aibom"
+      ],
+      "specVersion": "3.0.1",
+      "type": "CreationInfo"
+    },
+    {
+      "comment": "This SPDX view is exported from an operational AIBOM. Evidence classes, observations and unknown ownership may not map without loss.",
+      "creationInfo": "_:creationinfo",
+      "profileConformance": [
+        "core",
+        "software",
+        "ai",
+        "dataset"
+      ],
+      "rootElement": [
+        "urn:example:system:support-assistant"
+      ],
+      "spdxId": "urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299:spdx",
+      "type": "SpdxDocument"
+    },
+    {
+      "ai_informationAboutApplication": "Answer questions from approved support documents and create a support case after user confirmation.",
+      "creationInfo": "_:creationinfo",
+      "description": "Synthetic RAG assistant used to demonstrate operational AIBOM generation.",
+      "name": "Example support assistant",
+      "software_packageVersion": "1.0.0",
+      "spdxId": "urn:example:system:support-assistant",
+      "type": "ai_AIPackage"
+    },
+    {
+      "comment": "Operational AIBOM type=software-library; origin=discovered; sensitivity=internal.",
+      "creationInfo": "_:creationinfo",
+      "name": "openai",
+      "spdxId": "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1",
+      "type": "software_Package"
+    },
+    {
+      "comment": "Operational AIBOM type=framework; origin=discovered; sensitivity=internal.",
+      "creationInfo": "_:creationinfo",
+      "name": "@langchain/core",
+      "spdxId": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69",
+      "type": "software_Package"
+    },
+    {
+      "comment": "Operational AIBOM type=agent; origin=declared; sensitivity=public.",
+      "creationInfo": "_:creationinfo",
+      "name": "Support agent",
+      "software_packageVersion": "1.0.0",
+      "spdxId": "urn:example:agent:support",
+      "type": "software_Package"
+    },
+    {
+      "comment": "Operational AIBOM type=evaluation-dataset; origin=merged; sensitivity=public.",
+      "creationInfo": "_:creationinfo",
+      "dataset_datasetType": [
+        "noAssertion"
+      ],
+      "name": "regression.jsonl",
+      "spdxId": "urn:example:dataset:regression",
+      "type": "dataset_DatasetPackage",
+      "verifiedUsing": [
+        {
+          "algorithm": "sha256",
+          "hashValue": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3",
+          "type": "Hash"
+        }
+      ]
+    },
+    {
+      "comment": "Operational AIBOM type=hosted-model; origin=merged; sensitivity=public.",
+      "creationInfo": "_:creationinfo",
+      "name": "gpt-4.1",
+      "spdxId": "urn:example:model:openai:gpt-4.1",
+      "type": "ai_AIPackage"
+    },
+    {
+      "comment": "Operational AIBOM type=prompt; origin=merged; sensitivity=public.",
+      "creationInfo": "_:creationinfo",
+      "name": "system.prompt.txt",
+      "spdxId": "urn:example:prompt:support-system",
+      "type": "software_File",
+      "verifiedUsing": [
+        {
+          "algorithm": "sha256",
+          "hashValue": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca",
+          "type": "Hash"
+        }
+      ]
+    },
+    {
+      "comment": "Operational AIBOM type=tool; origin=declared; sensitivity=internal.",
+      "creationInfo": "_:creationinfo",
+      "name": "create_support_case",
+      "spdxId": "urn:example:tool:create-case",
+      "type": "software_Package"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: references.",
+      "from": "urn:example:system:support-assistant",
+      "relationshipType": "hasMetadata",
+      "spdxId": "urn:aibom:relationship:sha256:20b097e5253cffa5588cb024e076aa3b032d92fd9dae60f5458ad4238a6d0a66",
+      "to": [
+        "urn:example:model:openai:gpt-4.1"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: references.",
+      "from": "urn:example:system:support-assistant",
+      "relationshipType": "hasMetadata",
+      "spdxId": "urn:aibom:relationship:sha256:53461fda8780be6cdc7b0b9debe1215723ccb549b6a36dcfb507d2d7cd82802c",
+      "to": [
+        "urn:example:dataset:regression"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: governed-by.",
+      "from": "urn:example:agent:support",
+      "relationshipType": "configures",
+      "spdxId": "urn:aibom:relationship:sha256:71c2906f82cd13a3bd63f05ea523683a1c6b1c4ba8294147dbce67fe35d671b5",
+      "to": [
+        "urn:example:prompt:support-system"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: evaluated-with.",
+      "from": "urn:example:agent:support",
+      "relationshipType": "hasTest",
+      "spdxId": "urn:aibom:relationship:sha256:80d729cfc59d4b01577fee4c73bd9095a40f0805ff710dd2f9e07df678ed633c",
+      "to": [
+        "urn:example:dataset:regression"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: references.",
+      "from": "urn:example:system:support-assistant",
+      "relationshipType": "hasMetadata",
+      "spdxId": "urn:aibom:relationship:sha256:820cc3178ebcaec0ed971eb5cf17a46d236df3f01d1d8806e2de681056ffd46f",
+      "to": [
+        "urn:example:prompt:support-system"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: uses-model.",
+      "from": "urn:example:agent:support",
+      "relationshipType": "dependsOn",
+      "spdxId": "urn:aibom:relationship:sha256:9f6b9ee730324aacc9e2e92b3a1be392cd365d8484f39348955505135dfa6007",
+      "to": [
+        "urn:example:model:openai:gpt-4.1"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: depends-on.",
+      "from": "urn:example:system:support-assistant",
+      "relationshipType": "dependsOn",
+      "spdxId": "urn:aibom:relationship:sha256:af7fb676a3157a90626c13588b4a806cf7398c1b309c73acca79e1b45b290d5d",
+      "to": [
+        "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "from": "urn:example:system:support-assistant",
+      "relationshipType": "contains",
+      "spdxId": "urn:aibom:relationship:sha256:b28fe999e5a9a11b54d0d31fb262d1d7509e06992729547f22190ebd52bd4974",
+      "to": [
+        "urn:example:agent:support"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: can-invoke.",
+      "from": "urn:example:agent:support",
+      "relationshipType": "usesTool",
+      "spdxId": "urn:aibom:relationship:sha256:cc267f3284da90bb988a1f0bc2bd2a0725abcf0b1b4517d81f15569cc1244793",
+      "to": [
+        "urn:example:tool:create-case"
+      ],
+      "type": "Relationship"
+    },
+    {
+      "creationInfo": "_:creationinfo",
+      "description": "Operational AIBOM relationship type: depends-on.",
+      "from": "urn:example:system:support-assistant",
+      "relationshipType": "dependsOn",
+      "spdxId": "urn:aibom:relationship:sha256:cdc3c539f425758840ae7994651eedc31ccdb2dede5ab9c45e36a0459c25e49f",
+      "to": [
+        "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69"
+      ],
+      "type": "Relationship"
+    }
+  ]
+}

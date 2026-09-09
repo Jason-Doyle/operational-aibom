@@ -1,0 +1,464 @@
+{
+  "assessments": [
+    {
+      "evidence": [
+        "urn:example:evidence:regression-run"
+      ],
+      "id": "urn:example:assessment:regression",
+      "method": "Exact-match evaluation over the versioned regression dataset.",
+      "name": "Synthetic support regression",
+      "observedAt": "2026-09-01T00:00:00Z",
+      "result": "pass",
+      "sensitivity": "public",
+      "subject": "urn:example:agent:support",
+      "validUntil": "2026-10-01T00:00:00Z"
+    }
+  ],
+  "components": [
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:13ef6c8ef3a41ca17cb209e9f4487a07ec8fa33a1d1ea4a4c8e4eb7263e57688"
+      ],
+      "id": "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1",
+      "locations": [
+        {
+          "lineEnd": 6,
+          "lineStart": 6,
+          "path": "package.json"
+        }
+      ],
+      "name": "openai",
+      "origin": "discovered",
+      "properties": {
+        "category": "model-provider-sdk",
+        "declaredVersion": "^5.0.0",
+        "dependencySection": "dependencies",
+        "usageAssertion": "dependency-declaration"
+      },
+      "sensitivity": "internal",
+      "type": "software-library"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:411637ec46189581f99f96ca55d06e43d9e99853de23b733d31956b053f4de9c"
+      ],
+      "id": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69",
+      "locations": [
+        {
+          "lineEnd": 5,
+          "lineStart": 5,
+          "path": "package.json"
+        }
+      ],
+      "name": "@langchain/core",
+      "origin": "discovered",
+      "properties": {
+        "category": "ai-framework",
+        "declaredVersion": "^1.0.0",
+        "dependencySection": "dependencies",
+        "usageAssertion": "dependency-declaration"
+      },
+      "sensitivity": "internal",
+      "type": "framework"
+    },
+    {
+      "id": "urn:example:agent:support",
+      "name": "Support agent",
+      "origin": "declared",
+      "sensitivity": "public",
+      "type": "agent",
+      "version": "1.0.0"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79"
+      ],
+      "hashes": [
+        {
+          "algorithm": "SHA-256",
+          "value": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
+        }
+      ],
+      "id": "urn:example:dataset:regression",
+      "licences": [],
+      "locations": [
+        {
+          "path": "data/evaluation/regression.jsonl"
+        }
+      ],
+      "name": "regression.jsonl",
+      "origin": "merged",
+      "properties": {
+        "artifactPath": "data/evaluation/regression.jsonl",
+        "fileSize": 79,
+        "usageAssertion": "repository-presence"
+      },
+      "sensitivity": "public",
+      "type": "evaluation-dataset"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:c7fe14fdd3ee48a1e217791304bd65fcc84c7c1d0b1d5ba606441df2f3ae768b"
+      ],
+      "hashes": [],
+      "id": "urn:example:model:openai:gpt-4.1",
+      "licences": [],
+      "locations": [
+        {
+          "lineEnd": 4,
+          "lineStart": 4,
+          "path": "src/agent.ts"
+        }
+      ],
+      "name": "gpt-4.1",
+      "origin": "merged",
+      "properties": {
+        "provider": "openai",
+        "usageAssertion": "source-reference"
+      },
+      "sensitivity": "public",
+      "supplier": "OpenAI",
+      "type": "hosted-model"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c"
+      ],
+      "hashes": [
+        {
+          "algorithm": "SHA-256",
+          "value": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
+        }
+      ],
+      "id": "urn:example:prompt:support-system",
+      "licences": [],
+      "locations": [
+        {
+          "path": "prompts/system.prompt.txt"
+        }
+      ],
+      "name": "system.prompt.txt",
+      "origin": "merged",
+      "properties": {
+        "artifactPath": "prompts/system.prompt.txt",
+        "fileSize": 100,
+        "usageAssertion": "repository-presence"
+      },
+      "sensitivity": "public",
+      "type": "prompt"
+    },
+    {
+      "id": "urn:example:tool:create-case",
+      "name": "create_support_case",
+      "origin": "declared",
+      "properties": {
+        "approvalRequired": true,
+        "identity": "support-assistant-managed-identity"
+      },
+      "sensitivity": "internal",
+      "type": "tool"
+    }
+  ],
+  "context": {
+    "repository": "example/support-assistant"
+  },
+  "document": {
+    "contentDigest": {
+      "algorithm": "SHA-256",
+      "value": "fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299"
+    },
+    "generatedAt": "2026-09-08T22:49:31.000Z",
+    "generator": {
+      "name": "operational-aibom",
+      "version": "0.1.0"
+    },
+    "id": "urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299",
+    "source": {
+      "digest": {
+        "algorithm": "SHA-256",
+        "value": "a63260d559c8a8fb6f5699486a6daf1f5a4791713149885dde2e8eafe68b0403"
+      },
+      "manifestPresent": true,
+      "path": "aibom.yaml"
+    }
+  },
+  "evidence": [
+    {
+      "claim": "Dependency declaration references openai ^5.0.0.",
+      "class": "component-fact",
+      "confidence": 1,
+      "id": "urn:aibom:evidence:sha256:13ef6c8ef3a41ca17cb209e9f4487a07ec8fa33a1d1ea4a4c8e4eb7263e57688",
+      "method": "package-manifest-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "The package manifest contains this declaration; installation or runtime use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "lineEnd": 6,
+        "lineStart": 6,
+        "path": "package.json",
+        "type": "file"
+      },
+      "subject": "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1"
+    },
+    {
+      "claim": "Generation used a manifest matching SHA-256 a63260d559c8a8fb6f5699486a6daf1f5a4791713149885dde2e8eafe68b0403.",
+      "class": "component-fact",
+      "confidence": 1,
+      "id": "urn:aibom:evidence:sha256:2392e39c199583f366d78ace627ad4d2838d3f1e4791a2e82d9a4d3bfb149a76",
+      "method": "manifest-digest",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "The digest establishes manifest identity; it does not independently verify claims in the manifest.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "a63260d559c8a8fb6f5699486a6daf1f5a4791713149885dde2e8eafe68b0403"
+        },
+        "path": "aibom.yaml",
+        "type": "manifest"
+      },
+      "subject": "urn:example:system:support-assistant"
+    },
+    {
+      "claim": "Dependency declaration references @langchain/core ^1.0.0.",
+      "class": "component-fact",
+      "confidence": 1,
+      "id": "urn:aibom:evidence:sha256:411637ec46189581f99f96ca55d06e43d9e99853de23b733d31956b053f4de9c",
+      "method": "package-manifest-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "The package manifest contains this declaration; installation or runtime use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "lineEnd": 5,
+        "lineStart": 5,
+        "path": "package.json",
+        "type": "file"
+      },
+      "subject": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69"
+    },
+    {
+      "claim": "Repository contains a prompt artifact at prompts/system.prompt.txt.",
+      "class": "component-fact",
+      "confidence": 0.95,
+      "id": "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c",
+      "method": "file-extension-and-path-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "Presence is established; operational use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
+        },
+        "path": "prompts/system.prompt.txt",
+        "type": "file"
+      },
+      "subject": "urn:example:prompt:support-system"
+    },
+    {
+      "claim": "Repository contains a evaluation-dataset artifact at data/evaluation/regression.jsonl.",
+      "class": "component-fact",
+      "confidence": 0.95,
+      "id": "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79",
+      "method": "file-extension-and-path-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "Presence is established; operational use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
+        },
+        "path": "data/evaluation/regression.jsonl",
+        "type": "file"
+      },
+      "subject": "urn:example:dataset:regression"
+    },
+    {
+      "claim": "Source contains a reference to openai model identifier gpt-4.1.",
+      "class": "component-fact",
+      "confidence": 0.85,
+      "id": "urn:aibom:evidence:sha256:c7fe14fdd3ee48a1e217791304bd65fcc84c7c1d0b1d5ba606441df2f3ae768b",
+      "method": "source-pattern-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "The identifier is referenced in source or configuration; deployment or request-level use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "3e357b4adc0b81bd7a9d73be3300e02ae7ece6eec6fa61c71cede4639ec545d5"
+        },
+        "lineEnd": 4,
+        "lineStart": 4,
+        "path": "src/agent.ts",
+        "type": "file"
+      },
+      "subject": "urn:example:model:openai:gpt-4.1"
+    },
+    {
+      "claim": "The supplier documents this identifier as a hosted model.",
+      "class": "supplier-declaration",
+      "id": "urn:example:evidence:model-card",
+      "issuer": "OpenAI",
+      "observedAt": "2026-09-01T00:00:00Z",
+      "sensitivity": "public",
+      "source": {
+        "type": "uri",
+        "uri": "https://platform.openai.com/docs/models"
+      },
+      "subject": "urn:example:model:openai:gpt-4.1",
+      "validUntil": "2026-12-01T00:00:00Z"
+    },
+    {
+      "claim": "The declared agent composition passed the synthetic regression suite.",
+      "class": "organisational-assessment",
+      "id": "urn:example:evidence:regression-run",
+      "issuer": "Example platform team",
+      "method": "npm-test-fixture",
+      "observedAt": "2026-09-01T00:00:00Z",
+      "owner": "Example platform team",
+      "sensitivity": "public",
+      "subject": "urn:example:agent:support",
+      "validUntil": "2026-10-01T00:00:00Z"
+    }
+  ],
+  "observations": [],
+  "relationships": [
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:c7fe14fdd3ee48a1e217791304bd65fcc84c7c1d0b1d5ba606441df2f3ae768b"
+      ],
+      "from": "urn:example:system:support-assistant",
+      "id": "urn:aibom:relationship:sha256:20b097e5253cffa5588cb024e076aa3b032d92fd9dae60f5458ad4238a6d0a66",
+      "sensitivity": "internal",
+      "to": "urn:example:model:openai:gpt-4.1",
+      "type": "references"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79"
+      ],
+      "from": "urn:example:system:support-assistant",
+      "id": "urn:aibom:relationship:sha256:53461fda8780be6cdc7b0b9debe1215723ccb549b6a36dcfb507d2d7cd82802c",
+      "sensitivity": "internal",
+      "to": "urn:example:dataset:regression",
+      "type": "references"
+    },
+    {
+      "from": "urn:example:agent:support",
+      "id": "urn:aibom:relationship:sha256:71c2906f82cd13a3bd63f05ea523683a1c6b1c4ba8294147dbce67fe35d671b5",
+      "sensitivity": "public",
+      "to": "urn:example:prompt:support-system",
+      "type": "governed-by"
+    },
+    {
+      "from": "urn:example:agent:support",
+      "id": "urn:aibom:relationship:sha256:80d729cfc59d4b01577fee4c73bd9095a40f0805ff710dd2f9e07df678ed633c",
+      "sensitivity": "public",
+      "to": "urn:example:dataset:regression",
+      "type": "evaluated-with"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c"
+      ],
+      "from": "urn:example:system:support-assistant",
+      "id": "urn:aibom:relationship:sha256:820cc3178ebcaec0ed971eb5cf17a46d236df3f01d1d8806e2de681056ffd46f",
+      "sensitivity": "internal",
+      "to": "urn:example:prompt:support-system",
+      "type": "references"
+    },
+    {
+      "from": "urn:example:agent:support",
+      "id": "urn:aibom:relationship:sha256:9f6b9ee730324aacc9e2e92b3a1be392cd365d8484f39348955505135dfa6007",
+      "sensitivity": "public",
+      "to": "urn:example:model:openai:gpt-4.1",
+      "type": "uses-model"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:13ef6c8ef3a41ca17cb209e9f4487a07ec8fa33a1d1ea4a4c8e4eb7263e57688"
+      ],
+      "from": "urn:example:system:support-assistant",
+      "id": "urn:aibom:relationship:sha256:af7fb676a3157a90626c13588b4a806cf7398c1b309c73acca79e1b45b290d5d",
+      "sensitivity": "internal",
+      "to": "urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1",
+      "type": "depends-on"
+    },
+    {
+      "from": "urn:example:system:support-assistant",
+      "id": "urn:aibom:relationship:sha256:b28fe999e5a9a11b54d0d31fb262d1d7509e06992729547f22190ebd52bd4974",
+      "sensitivity": "public",
+      "to": "urn:example:agent:support",
+      "type": "contains"
+    },
+    {
+      "from": "urn:example:agent:support",
+      "id": "urn:aibom:relationship:sha256:cc267f3284da90bb988a1f0bc2bd2a0725abcf0b1b4517d81f15569cc1244793",
+      "sensitivity": "internal",
+      "to": "urn:example:tool:create-case",
+      "type": "can-invoke"
+    },
+    {
+      "evidence": [
+        "urn:aibom:evidence:sha256:411637ec46189581f99f96ca55d06e43d9e99853de23b733d31956b053f4de9c"
+      ],
+      "from": "urn:example:system:support-assistant",
+      "id": "urn:aibom:relationship:sha256:cdc3c539f425758840ae7994651eedc31ccdb2dede5ab9c45e36a0459c25e49f",
+      "sensitivity": "internal",
+      "to": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69",
+      "type": "depends-on"
+    }
+  ],
+  "schemaVersion": "0.1.0",
+  "system": {
+    "description": "Synthetic RAG assistant used to demonstrate operational AIBOM generation.",
+    "id": "urn:example:system:support-assistant",
+    "intendedUse": "Answer questions from approved support documents and create a support case after user confirmation.",
+    "name": "Example support assistant",
+    "owner": "Example platform team",
+    "properties": {
+      "criticality": "medium"
+    },
+    "sensitivity": "public",
+    "version": "1.0.0"
+  },
+  "unknowns": [
+    {
+      "class": "explicit-unknown",
+      "compensatingControl": "Supplier notices and model migration tests are reviewed before release.",
+      "consequence": "Dataset-level upstream impact cannot be determined from this record.",
+      "field": "trainingDataset",
+      "id": "urn:example:unknown:model-training-data",
+      "owner": "Example platform team",
+      "reason": "The hosted model supplier does not publish a complete training dataset inventory.",
+      "reviewAfter": "2026-12-01T00:00:00Z",
+      "sensitivity": "public",
+      "subject": "urn:example:model:openai:gpt-4.1"
+    }
+  ]
+}

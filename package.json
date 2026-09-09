@@ -1,0 +1,92 @@
+{
+  "name": "operational-aibom",
+  "version": "0.1.0",
+  "description": "Generate evidence-classified, deployment-aware operational AI Bills of Materials.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Jason Doyle",
+  "homepage": "https://github.com/Jason-Doyle/operational-aibom#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason-Doyle/operational-aibom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jason-Doyle/operational-aibom/issues"
+  },
+  "keywords": [
+    "aibom",
+    "ai-bill-of-materials",
+    "ai-governance",
+    "ai-supply-chain",
+    "cyclonedx",
+    "github-actions",
+    "provenance",
+    "sbom",
+    "spdx",
+    "supply-chain-security"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "aibom": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./schemas/aibom": "./schemas/aibom.schema.json",
+    "./schemas/manifest": "./schemas/manifest.schema.json"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "docs",
+    "action.yml",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "REPOSITORY-DIFFERENTIATION.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run build && npm run smoke && npm run package:check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint . --max-warnings=0",
+    "smoke": "node scripts/smoke.mjs",
+    "standards:check": "node scripts/standards-check.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package:check": "npm pack --dry-run",
+    "prebuild": "node scripts/clean.mjs",
+    "prepublishOnly": "npm run check && npm run standards:check"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "commander": "^15.0.0",
+    "fast-glob": "^3.3.3",
+    "ignore": "^7.0.9",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@cyclonedx/cyclonedx-library": "^10.2.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.13.3",
+    "ajv-formats-draft2019": "^1.6.1",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^5.0.0"
+  }
+}
