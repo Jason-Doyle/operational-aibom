@@ -1,6 +1,6 @@
 {
   "name": "operational-aibom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate evidence-classified, deployment-aware operational AI Bills of Materials.",
   "type": "module",
   "license": "Apache-2.0",

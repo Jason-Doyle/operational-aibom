@@ -41342,7 +41342,7 @@ var import_node_path6 = require("path");
 // src/constants.ts
 var SCHEMA_VERSION = "0.1.0";
 var TOOL_NAME = "operational-aibom";
-var TOOL_VERSION = "0.1.0";
+var TOOL_VERSION = "0.1.1";
 var DEFAULT_DISCOVERY_EXCLUDES = [
   "**/.git/**",
   "**/.next/**",

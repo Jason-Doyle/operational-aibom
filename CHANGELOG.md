@@ -2,6 +2,11 @@
 
 All notable changes will be recorded in this file.
 
+## 0.1.1 - 2026-09-08
+
+- publish the package from the CI-built tarball through npm trusted publishing;
+- align the npm package bytes with the GitHub-attested release artifact.
+
 ## 0.1.0 - 2026-09-08
 
 Initial public implementation:

@@ -2,7 +2,7 @@
 
 Generate an evidence-classified, deployment-aware AI Bill of Materials from a version-controlled manifest, conservative repository discovery and CI context.
 
-This repository contains the public `0.1.0` implementation. The source is licensed under Apache 2.0. The `operational-aibom` npm package is prepared for publication but has not yet been released.
+This repository contains the public `0.1.1` implementation. The source is licensed under Apache 2.0.
 
 The design follows [The AI Bill of Materials Is an Operational Record](https://jasondoyle.ie/whitepapers/the-ai-bill-of-materials-is-an-operational-record/).
 

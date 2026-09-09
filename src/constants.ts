@@ -1,6 +1,6 @@
 export const SCHEMA_VERSION = "0.1.0";
 export const TOOL_NAME = "operational-aibom";
-export const TOOL_VERSION = "0.1.0";
+export const TOOL_VERSION = "0.1.1";
 
 export const COMPONENT_TYPES = [
   "ai-system",

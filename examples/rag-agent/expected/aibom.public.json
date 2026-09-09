@@ -108,7 +108,7 @@
     "generatedAt": "2026-09-08T22:49:31.000Z",
     "generator": {
       "name": "operational-aibom",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     "id": "urn:aibom:document:sha256:de93ddbc51e783ceb37ef061a61d1f9cd37f1846f7ac7eeb79e4ff7e30c4a78b",
     "source": {
