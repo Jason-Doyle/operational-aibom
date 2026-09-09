@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a reproducible defect
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report vulnerabilities here. Use private vulnerability reporting.
+        Do not include private prompts, datasets, model artifacts, credentials or production traces.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: 0.1.1
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      options:
+        - CLI
+        - TypeScript library
+        - GitHub Action
+        - Repository discovery
+        - Schema or validation
+        - CycloneDX export
+        - SPDX export
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include the smallest synthetic example and relevant commands.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Node.js version and execution context.
+    validations:
+      required: true

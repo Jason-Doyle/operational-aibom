@@ -1,0 +1,14 @@
+coverage/
+dist/*
+!dist/action/
+!dist/action/index.cjs
+node_modules/
+examples/generated/
+*.tgz
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db

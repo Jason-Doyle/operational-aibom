@@ -1,0 +1,107 @@
+name: Generate operational AIBOM
+description: Generate an evidence-classified, deployment-aware AI Bill of Materials.
+author: Jason Doyle
+
+branding:
+  icon: package
+  color: blue
+
+inputs:
+  path:
+    description: Project directory to inspect, relative to GITHUB_WORKSPACE.
+    required: false
+    default: .
+  manifest:
+    description: Optional manifest path relative to path. Leave empty to use aibom.yaml when present.
+    required: false
+    default: ""
+  output:
+    description: Canonical operational AIBOM output path.
+    required: false
+    default: aibom.json
+  public-output:
+    description: Optional public projection output path. The system must be marked public.
+    required: false
+    default: ""
+  cyclonedx-output:
+    description: Optional CycloneDX 1.7 compatibility output path.
+    required: false
+    default: ""
+  spdx-output:
+    description: Optional SPDX 3.0.1 JSON-LD compatibility output path.
+    required: false
+    default: ""
+  baseline:
+    description: Optional baseline operational AIBOM used for semantic diffing.
+    required: false
+    default: ""
+  diff-output:
+    description: Diff output path when baseline is configured.
+    required: false
+    default: aibom.diff.json
+  discovery:
+    description: Enable conservative repository discovery.
+    required: false
+    default: "true"
+  environment-context:
+    description: Include GitHub and AIBOM context environment variables.
+    required: false
+    default: "true"
+  generated-at:
+    description: Optional ISO 8601 timestamp override for reproducible generation.
+    required: false
+    default: ""
+  build-id:
+    description: Optional build identifier.
+    required: false
+    default: ""
+  release:
+    description: Optional release identifier.
+    required: false
+    default: ""
+  deployment-id:
+    description: Optional deployment identifier.
+    required: false
+    default: ""
+  environment:
+    description: Optional deployment environment.
+    required: false
+    default: ""
+  region:
+    description: Optional deployment region.
+    required: false
+    default: ""
+  fail-on-unknowns:
+    description: Fail when any explicit unknown exists.
+    required: false
+    default: "false"
+  fail-on-new-unknowns:
+    description: Fail when the record introduces unknowns relative to baseline.
+    required: false
+    default: "false"
+  fail-on-changes:
+    description: Fail when the material record differs from baseline.
+    required: false
+    default: "false"
+
+outputs:
+  document-id:
+    description: Canonical operational AIBOM document identifier.
+  output:
+    description: Absolute path to the canonical output.
+  public-output:
+    description: Absolute path to the public projection when requested.
+  cyclonedx-output:
+    description: Absolute path to the CycloneDX output when requested.
+  spdx-output:
+    description: Absolute path to the SPDX output when requested.
+  diff-output:
+    description: Absolute path to the semantic diff when a baseline is configured.
+  unknown-count:
+    description: Number of explicit unknown records.
+  review-required:
+    description: Whether the semantic diff indicates that review is required.
+
+runs:
+  using: node24
+  main: dist/action/index.cjs

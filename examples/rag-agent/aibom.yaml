@@ -1,0 +1,125 @@
+schemaVersion: 0.1.0
+
+system:
+  id: urn:example:system:support-assistant
+  name: Example support assistant
+  version: 1.0.0
+  description: Synthetic RAG assistant used to demonstrate operational AIBOM generation.
+  owner: Example platform team
+  intendedUse: Answer questions from approved support documents and create a support case after user confirmation.
+  sensitivity: public
+  properties:
+    criticality: medium
+
+context:
+  repository: example/support-assistant
+
+components:
+  - id: urn:example:agent:support
+    type: agent
+    name: Support agent
+    version: 1.0.0
+    sensitivity: public
+  - id: urn:example:model:openai:gpt-4.1
+    type: hosted-model
+    name: gpt-4.1
+    supplier: OpenAI
+    sensitivity: public
+    properties:
+      provider: openai
+  - id: urn:example:prompt:support-system
+    type: prompt
+    name: system.prompt.txt
+    sensitivity: public
+  - id: urn:example:dataset:regression
+    type: evaluation-dataset
+    name: regression.jsonl
+    sensitivity: public
+  - id: urn:example:tool:create-case
+    type: tool
+    name: create_support_case
+    sensitivity: internal
+    properties:
+      approvalRequired: true
+      identity: support-assistant-managed-identity
+
+relationships:
+  - from: urn:example:system:support-assistant
+    type: contains
+    to: urn:example:agent:support
+    sensitivity: public
+  - from: urn:example:agent:support
+    type: uses-model
+    to: urn:example:model:openai:gpt-4.1
+    sensitivity: public
+  - from: urn:example:agent:support
+    type: governed-by
+    to: urn:example:prompt:support-system
+    sensitivity: public
+  - from: urn:example:agent:support
+    type: evaluated-with
+    to: urn:example:dataset:regression
+    sensitivity: public
+  - from: urn:example:agent:support
+    type: can-invoke
+    to: urn:example:tool:create-case
+    sensitivity: internal
+
+evidence:
+  - id: urn:example:evidence:model-card
+    class: supplier-declaration
+    subject: urn:example:model:openai:gpt-4.1
+    claim: The supplier documents this identifier as a hosted model.
+    issuer: OpenAI
+    observedAt: 2026-09-01T00:00:00Z
+    validUntil: 2026-12-01T00:00:00Z
+    source:
+      type: uri
+      uri: https://platform.openai.com/docs/models
+    sensitivity: public
+  - id: urn:example:evidence:regression-run
+    class: organisational-assessment
+    subject: urn:example:agent:support
+    claim: The declared agent composition passed the synthetic regression suite.
+    issuer: Example platform team
+    owner: Example platform team
+    method: npm-test-fixture
+    observedAt: 2026-09-01T00:00:00Z
+    validUntil: 2026-10-01T00:00:00Z
+    sensitivity: public
+
+assessments:
+  - id: urn:example:assessment:regression
+    subject: urn:example:agent:support
+    name: Synthetic support regression
+    method: Exact-match evaluation over the versioned regression dataset.
+    result: pass
+    observedAt: 2026-09-01T00:00:00Z
+    validUntil: 2026-10-01T00:00:00Z
+    evidence:
+      - urn:example:evidence:regression-run
+    sensitivity: public
+
+unknowns:
+  - id: urn:example:unknown:model-training-data
+    class: explicit-unknown
+    subject: urn:example:model:openai:gpt-4.1
+    field: trainingDataset
+    reason: The hosted model supplier does not publish a complete training dataset inventory.
+    owner: Example platform team
+    consequence: Dataset-level upstream impact cannot be determined from this record.
+    compensatingControl: Supplier notices and model migration tests are reviewed before release.
+    reviewAfter: 2026-12-01T00:00:00Z
+    sensitivity: public
+
+discovery:
+  enabled: true
+  useGitignore: true
+  exclude:
+    - expected/**
+  maxSourceFileBytes: 1000000
+  maxHashBytes: 50000000
+  defaultSensitivity: internal
+
+publication:
+  defaultSensitivity: internal

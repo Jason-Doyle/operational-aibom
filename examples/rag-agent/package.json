@@ -1,0 +1,8 @@
+{
+  "name": "operational-aibom-rag-example",
+  "private": true,
+  "dependencies": {
+    "@langchain/core": "^1.0.0",
+    "openai": "^5.0.0"
+  }
+}
