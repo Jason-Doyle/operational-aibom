@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a focused capability or integration
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Operational use case
+      description: Describe the question or workflow the current record cannot support.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Available evidence
+      description: Identify the source, owner, freshness and confidence of the proposed data.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Proposed behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Correctness, privacy and compatibility boundaries
+      description: State what must not be inferred, exposed or broken.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

@@ -1,0 +1,4 @@
+name: Operational AIBOM CodeQL configuration
+
+paths-ignore:
+  - dist/**

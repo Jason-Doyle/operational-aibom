@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:operational-aibom:schema:document:0.1.0",
+  "title": "Operational AIBOM document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "document",
+    "system",
+    "context",
+    "components",
+    "relationships",
+    "evidence",
+    "assessments",
+    "observations",
+    "unknowns"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1.0"
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "generatedAt", "generator", "source", "contentDigest"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "generator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["manifestPresent"],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "digest": {
+              "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/hash"
+            },
+            "manifestPresent": {
+              "type": "boolean"
+            }
+          }
+        },
+        "contentDigest": {
+          "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/hash"
+        }
+      }
+    },
+    "system": {
+      "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/system"
+    },
+    "context": {
+      "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/context"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/component"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/relationship"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["id"]
+          }
+        ]
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/evidence"
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/assessment"
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/observation"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:operational-aibom:schema:manifest:0.1.0#/$defs/unknown"
+      }
+    }
+  }
+}
