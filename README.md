@@ -311,7 +311,7 @@ node dist\cli.js generate examples\rag-agent `
 The expected canonical document identifier is:
 
 ```text
-urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299
+urn:aibom:document:sha256:8b7e2d67e4425f133252f1a1f70a6226623ba696a906f2e8b34d9a164ad9cb0b
 ```
 
 ## Development

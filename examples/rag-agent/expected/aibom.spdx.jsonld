@@ -32,7 +32,7 @@
       "rootElement": [
         "urn:example:system:support-assistant"
       ],
-      "spdxId": "urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299:spdx",
+      "spdxId": "urn:aibom:document:sha256:8b7e2d67e4425f133252f1a1f70a6226623ba696a906f2e8b34d9a164ad9cb0b:spdx",
       "type": "SpdxDocument"
     },
     {
@@ -78,7 +78,7 @@
       "verifiedUsing": [
         {
           "algorithm": "sha256",
-          "hashValue": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3",
+          "hashValue": "569e244dd3d21dda05cbcd88a27be2e3a3d41f428c9c7a00f0c2a20a77d54ab5",
           "type": "Hash"
         }
       ]
@@ -99,7 +99,7 @@
       "verifiedUsing": [
         {
           "algorithm": "sha256",
-          "hashValue": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca",
+          "hashValue": "b7e4497416a7b3ae539b56348e0610ba1a7faddb40457598a5ad60ca887a9acf",
           "type": "Hash"
         }
       ]

@@ -71,12 +71,12 @@
     },
     {
       "evidence": [
-        "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79"
+        "urn:aibom:evidence:sha256:0400701d811891c981ab686b6c6a32588c7ddd6c6b849654f9d540d64b69b6df"
       ],
       "hashes": [
         {
           "algorithm": "SHA-256",
-          "value": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
+          "value": "569e244dd3d21dda05cbcd88a27be2e3a3d41f428c9c7a00f0c2a20a77d54ab5"
         }
       ],
       "id": "urn:example:dataset:regression",
@@ -90,7 +90,7 @@
       "origin": "merged",
       "properties": {
         "artifactPath": "data/evaluation/regression.jsonl",
-        "fileSize": 79,
+        "fileSize": 78,
         "usageAssertion": "repository-presence"
       },
       "sensitivity": "public",
@@ -122,12 +122,12 @@
     },
     {
       "evidence": [
-        "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c"
+        "urn:aibom:evidence:sha256:c980198243931a2b156e07a2200764dd5d32e914f9da8e82f14db9249b19adab"
       ],
       "hashes": [
         {
           "algorithm": "SHA-256",
-          "value": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
+          "value": "b7e4497416a7b3ae539b56348e0610ba1a7faddb40457598a5ad60ca887a9acf"
         }
       ],
       "id": "urn:example:prompt:support-system",
@@ -141,7 +141,7 @@
       "origin": "merged",
       "properties": {
         "artifactPath": "prompts/system.prompt.txt",
-        "fileSize": 100,
+        "fileSize": 98,
         "usageAssertion": "repository-presence"
       },
       "sensitivity": "public",
@@ -165,14 +165,14 @@
   "document": {
     "contentDigest": {
       "algorithm": "SHA-256",
-      "value": "fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299"
+      "value": "8b7e2d67e4425f133252f1a1f70a6226623ba696a906f2e8b34d9a164ad9cb0b"
     },
     "generatedAt": "2026-09-08T22:49:31.000Z",
     "generator": {
       "name": "operational-aibom",
       "version": "0.1.0"
     },
-    "id": "urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299",
+    "id": "urn:aibom:document:sha256:8b7e2d67e4425f133252f1a1f70a6226623ba696a906f2e8b34d9a164ad9cb0b",
     "source": {
       "digest": {
         "algorithm": "SHA-256",
@@ -183,6 +183,29 @@
     }
   },
   "evidence": [
+    {
+      "claim": "Repository contains a evaluation-dataset artifact at data/evaluation/regression.jsonl.",
+      "class": "component-fact",
+      "confidence": 0.95,
+      "id": "urn:aibom:evidence:sha256:0400701d811891c981ab686b6c6a32588c7ddd6c6b849654f9d540d64b69b6df",
+      "method": "file-extension-and-path-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "Presence is established; operational use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "569e244dd3d21dda05cbcd88a27be2e3a3d41f428c9c7a00f0c2a20a77d54ab5"
+        },
+        "path": "data/evaluation/regression.jsonl",
+        "type": "file"
+      },
+      "subject": "urn:example:dataset:regression"
+    },
     {
       "claim": "Dependency declaration references openai ^5.0.0.",
       "class": "component-fact",
@@ -249,52 +272,6 @@
       "subject": "urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69"
     },
     {
-      "claim": "Repository contains a prompt artifact at prompts/system.prompt.txt.",
-      "class": "component-fact",
-      "confidence": 0.95,
-      "id": "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c",
-      "method": "file-extension-and-path-inspection",
-      "observedAt": "2026-09-08T22:49:31.000Z",
-      "properties": {
-        "diffMode": "content"
-      },
-      "scope": "Presence is established; operational use is not established.",
-      "sensitivity": "internal",
-      "source": {
-        "collector": "operational-aibom",
-        "digest": {
-          "algorithm": "SHA-256",
-          "value": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
-        },
-        "path": "prompts/system.prompt.txt",
-        "type": "file"
-      },
-      "subject": "urn:example:prompt:support-system"
-    },
-    {
-      "claim": "Repository contains a evaluation-dataset artifact at data/evaluation/regression.jsonl.",
-      "class": "component-fact",
-      "confidence": 0.95,
-      "id": "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79",
-      "method": "file-extension-and-path-inspection",
-      "observedAt": "2026-09-08T22:49:31.000Z",
-      "properties": {
-        "diffMode": "content"
-      },
-      "scope": "Presence is established; operational use is not established.",
-      "sensitivity": "internal",
-      "source": {
-        "collector": "operational-aibom",
-        "digest": {
-          "algorithm": "SHA-256",
-          "value": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
-        },
-        "path": "data/evaluation/regression.jsonl",
-        "type": "file"
-      },
-      "subject": "urn:example:dataset:regression"
-    },
-    {
       "claim": "Source contains a reference to openai model identifier gpt-4.1.",
       "class": "component-fact",
       "confidence": 0.85,
@@ -318,6 +295,29 @@
         "type": "file"
       },
       "subject": "urn:example:model:openai:gpt-4.1"
+    },
+    {
+      "claim": "Repository contains a prompt artifact at prompts/system.prompt.txt.",
+      "class": "component-fact",
+      "confidence": 0.95,
+      "id": "urn:aibom:evidence:sha256:c980198243931a2b156e07a2200764dd5d32e914f9da8e82f14db9249b19adab",
+      "method": "file-extension-and-path-inspection",
+      "observedAt": "2026-09-08T22:49:31.000Z",
+      "properties": {
+        "diffMode": "content"
+      },
+      "scope": "Presence is established; operational use is not established.",
+      "sensitivity": "internal",
+      "source": {
+        "collector": "operational-aibom",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "b7e4497416a7b3ae539b56348e0610ba1a7faddb40457598a5ad60ca887a9acf"
+        },
+        "path": "prompts/system.prompt.txt",
+        "type": "file"
+      },
+      "subject": "urn:example:prompt:support-system"
     },
     {
       "claim": "The supplier documents this identifier as a hosted model.",
@@ -360,7 +360,7 @@
     },
     {
       "evidence": [
-        "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79"
+        "urn:aibom:evidence:sha256:0400701d811891c981ab686b6c6a32588c7ddd6c6b849654f9d540d64b69b6df"
       ],
       "from": "urn:example:system:support-assistant",
       "id": "urn:aibom:relationship:sha256:53461fda8780be6cdc7b0b9debe1215723ccb549b6a36dcfb507d2d7cd82802c",
@@ -384,7 +384,7 @@
     },
     {
       "evidence": [
-        "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c"
+        "urn:aibom:evidence:sha256:c980198243931a2b156e07a2200764dd5d32e914f9da8e82f14db9249b19adab"
       ],
       "from": "urn:example:system:support-assistant",
       "id": "urn:aibom:relationship:sha256:820cc3178ebcaec0ed971eb5cf17a46d236df3f01d1d8806e2de681056ffd46f",

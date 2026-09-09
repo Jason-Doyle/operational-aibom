@@ -29,7 +29,7 @@
       "hashes": [
         {
           "algorithm": "SHA-256",
-          "value": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
+          "value": "569e244dd3d21dda05cbcd88a27be2e3a3d41f428c9c7a00f0c2a20a77d54ab5"
         }
       ],
       "id": "urn:example:dataset:regression",
@@ -43,7 +43,7 @@
       "origin": "merged",
       "properties": {
         "artifactPath": "data/evaluation/regression.jsonl",
-        "fileSize": 79,
+        "fileSize": 78,
         "usageAssertion": "repository-presence"
       },
       "sensitivity": "public",
@@ -76,7 +76,7 @@
       "hashes": [
         {
           "algorithm": "SHA-256",
-          "value": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
+          "value": "b7e4497416a7b3ae539b56348e0610ba1a7faddb40457598a5ad60ca887a9acf"
         }
       ],
       "id": "urn:example:prompt:support-system",
@@ -90,7 +90,7 @@
       "origin": "merged",
       "properties": {
         "artifactPath": "prompts/system.prompt.txt",
-        "fileSize": 100,
+        "fileSize": 98,
         "usageAssertion": "repository-presence"
       },
       "sensitivity": "public",
@@ -103,14 +103,14 @@
   "document": {
     "contentDigest": {
       "algorithm": "SHA-256",
-      "value": "2135a8953c2205401710a5c4eaf501f0f3db8d718c9f9726f618f3830cb3be44"
+      "value": "de93ddbc51e783ceb37ef061a61d1f9cd37f1846f7ac7eeb79e4ff7e30c4a78b"
     },
     "generatedAt": "2026-09-08T22:49:31.000Z",
     "generator": {
       "name": "operational-aibom",
       "version": "0.1.0"
     },
-    "id": "urn:aibom:document:sha256:2135a8953c2205401710a5c4eaf501f0f3db8d718c9f9726f618f3830cb3be44",
+    "id": "urn:aibom:document:sha256:de93ddbc51e783ceb37ef061a61d1f9cd37f1846f7ac7eeb79e4ff7e30c4a78b",
     "source": {
       "manifestPresent": true
     }

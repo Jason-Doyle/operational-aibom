@@ -128,7 +128,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "1c82154149f70a4f2a291af8a7b23147f0cb4d9f5dad5cfde30442f3a7221dc3"
+          "content": "569e244dd3d21dda05cbcd88a27be2e3a3d41f428c9c7a00f0c2a20a77d54ab5"
         }
       ],
       "name": "regression.jsonl",
@@ -147,7 +147,7 @@
         },
         {
           "name": "operational-aibom:evidence",
-          "value": "urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79"
+          "value": "urn:aibom:evidence:sha256:0400701d811891c981ab686b6c6a32588c7ddd6c6b849654f9d540d64b69b6df"
         },
         {
           "name": "operational-aibom:property:artifactPath",
@@ -155,7 +155,7 @@
         },
         {
           "name": "operational-aibom:property:fileSize",
-          "value": "79"
+          "value": "78"
         },
         {
           "name": "operational-aibom:property:usageAssertion",
@@ -218,7 +218,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "8e2cd112e50a26d6148e81ba7248294cc959205cbb6f0503ee9395b21aefe1ca"
+          "content": "b7e4497416a7b3ae539b56348e0610ba1a7faddb40457598a5ad60ca887a9acf"
         }
       ],
       "name": "system.prompt.txt",
@@ -237,7 +237,7 @@
         },
         {
           "name": "operational-aibom:evidence",
-          "value": "urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c"
+          "value": "urn:aibom:evidence:sha256:c980198243931a2b156e07a2200764dd5d32e914f9da8e82f14db9249b19adab"
         },
         {
           "name": "operational-aibom:property:artifactPath",
@@ -245,7 +245,7 @@
         },
         {
           "name": "operational-aibom:property:fileSize",
-          "value": "100"
+          "value": "98"
         },
         {
           "name": "operational-aibom:property:usageAssertion",
@@ -349,7 +349,7 @@
     "properties": [
       {
         "name": "operational-aibom:source-document",
-        "value": "urn:aibom:document:sha256:fbea4c2378396a7c31dad5c1b9536a811b71cf7fd4610b3200015585641ed299"
+        "value": "urn:aibom:document:sha256:8b7e2d67e4425f133252f1a1f70a6226623ba696a906f2e8b34d9a164ad9cb0b"
       },
       {
         "name": "operational-aibom:export-loss",
@@ -409,6 +409,10 @@
       "value": "{\"from\":\"urn:example:system:support-assistant\",\"type\":\"depends-on\",\"to\":\"urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69\"}"
     },
     {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:0400701d811891c981ab686b6c6a32588c7ddd6c6b849654f9d540d64b69b6df",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:dataset:regression\",\"claim\":\"Repository contains a evaluation-dataset artifact at data/evaluation/regression.jsonl.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
       "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:13ef6c8ef3a41ca17cb209e9f4487a07ec8fa33a1d1ea4a4c8e4eb7263e57688",
       "value": "{\"class\":\"component-fact\",\"subject\":\"urn:aibom:component:sha256:17140c48263c8ec83519cbf87079113576605dec9286b68e7aa30dad4b77a8c1\",\"claim\":\"Dependency declaration references openai ^5.0.0.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
     },
@@ -421,16 +425,12 @@
       "value": "{\"class\":\"component-fact\",\"subject\":\"urn:aibom:component:sha256:96a48bb39eebd138463a979c1e8b1abaca64866be7b8427ad702f0c4b9d02d69\",\"claim\":\"Dependency declaration references @langchain/core ^1.0.0.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
     },
     {
-      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:8eca3b73d042e90841d3c19fcd2c4e2814b7c0e8ada24fca4530d5bbad44b05c",
-      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:prompt:support-system\",\"claim\":\"Repository contains a prompt artifact at prompts/system.prompt.txt.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
-    },
-    {
-      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:962dad6990291a86e31adad1e4543dc96f5c2cfb34d3fae9e149847cd84e6f79",
-      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:dataset:regression\",\"claim\":\"Repository contains a evaluation-dataset artifact at data/evaluation/regression.jsonl.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
-    },
-    {
       "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:c7fe14fdd3ee48a1e217791304bd65fcc84c7c1d0b1d5ba606441df2f3ae768b",
       "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:model:openai:gpt-4.1\",\"claim\":\"Source contains a reference to openai model identifier gpt-4.1.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
+    },
+    {
+      "name": "operational-aibom:evidence:urn:aibom:evidence:sha256:c980198243931a2b156e07a2200764dd5d32e914f9da8e82f14db9249b19adab",
+      "value": "{\"class\":\"component-fact\",\"subject\":\"urn:example:prompt:support-system\",\"claim\":\"Repository contains a prompt artifact at prompts/system.prompt.txt.\",\"observedAt\":\"2026-09-08T22:49:31.000Z\"}"
     },
     {
       "name": "operational-aibom:evidence:urn:example:evidence:model-card",
@@ -445,7 +445,7 @@
       "value": "{\"subject\":\"urn:example:model:openai:gpt-4.1\",\"field\":\"trainingDataset\",\"reason\":\"The hosted model supplier does not publish a complete training dataset inventory.\",\"reviewAfter\":\"2026-12-01T00:00:00Z\"}"
     }
   ],
-  "serialNumber": "urn:uuid:a4851484-b551-5c97-a4dc-c02150856232",
+  "serialNumber": "urn:uuid:bd1d980f-1e5b-528f-9ba9-3eb499a826b7",
   "specVersion": "1.7",
   "version": 1
 }
