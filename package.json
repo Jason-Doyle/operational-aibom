@@ -79,7 +79,7 @@
   "devDependencies": {
     "@cyclonedx/cyclonedx-library": "^10.2.0",
     "@eslint/js": "^10.0.1",
-    "@types/node": "^24.13.3",
+    "@types/node": "^26.4.1",
     "ajv-formats-draft2019": "^1.6.1",
     "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",
