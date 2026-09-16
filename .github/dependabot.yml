@@ -9,8 +9,16 @@ updates:
       npm:
         patterns:
           - "*"
+    ignore:
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    groups:
+      codeql:
+        patterns:
+          - "github/codeql-action/*"
